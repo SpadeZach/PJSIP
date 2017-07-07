@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V7M-Ku-xTh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pIu-1h-hfa">
+            <objects>
+                <navigationController id="V7M-Ku-xTh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wZL-Um-ZvB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F3w-pe-yJV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aE8-db-yOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-121" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="服务器" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GG7-mc-L5c">
+                                <rect key="frame" x="66" y="168" width="243" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mt-ZH-VG9">
+                                <rect key="frame" x="66" y="218" width="243" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmj-If-QMa">
+                                <rect key="frame" x="66" y="268" width="243" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tz-j1-hxN">
+                                <rect key="frame" x="171.5" y="338" width="31" height="30"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="loginButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nn9-ZG-GKQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GG7-mc-L5c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="1Tp-VN-0Fh"/>
+                            <constraint firstItem="GG7-mc-L5c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6cb-5z-iBZ"/>
+                            <constraint firstItem="1mt-ZH-VG9" firstAttribute="top" secondItem="GG7-mc-L5c" secondAttribute="bottom" constant="20" id="LeM-3O-AEY"/>
+                            <constraint firstItem="GG7-mc-L5c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="OWl-eP-mVN"/>
+                            <constraint firstItem="3tz-j1-hxN" firstAttribute="top" secondItem="Kmj-If-QMa" secondAttribute="bottom" constant="40" id="Vu8-bF-XPt"/>
+                            <constraint firstItem="1mt-ZH-VG9" firstAttribute="leading" secondItem="GG7-mc-L5c" secondAttribute="leading" id="XJT-PF-7Mx"/>
+                            <constraint firstItem="1mt-ZH-VG9" firstAttribute="trailing" secondItem="GG7-mc-L5c" secondAttribute="trailing" id="cUm-lo-rNb"/>
+                            <constraint firstItem="Kmj-If-QMa" firstAttribute="leading" secondItem="1mt-ZH-VG9" secondAttribute="leading" id="e3G-RM-5UG"/>
+                            <constraint firstItem="Kmj-If-QMa" firstAttribute="trailing" secondItem="1mt-ZH-VG9" secondAttribute="trailing" id="fce-c8-BIe"/>
+                            <constraint firstItem="3tz-j1-hxN" firstAttribute="centerX" secondItem="Kmj-If-QMa" secondAttribute="centerX" id="ih0-pL-9Xe"/>
+                            <constraint firstItem="Kmj-If-QMa" firstAttribute="top" secondItem="1mt-ZH-VG9" secondAttribute="bottom" constant="20" id="vQg-wb-ARB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GG7-mc-L5c" secondAttribute="trailing" constant="50" id="vUx-tT-fBc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ILv-Fj-d0Z"/>
+                    <connections>
+                        <outlet property="passwordField" destination="Kmj-If-QMa" id="0Z6-df-j70"/>
+                        <outlet property="serverField" destination="GG7-mc-L5c" id="ySP-VX-LRu"/>
+                        <outlet property="usernameField" destination="1mt-ZH-VG9" id="B0g-vq-WZs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="106"/>
+        </scene>
+    </scenes>
+</document>
